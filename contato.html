@@ -1,0 +1,32 @@
+<!DOCTYPE html5>
+<html lang="pt-br">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Maryanne Kaffer</title>
+</head>
+<main>
+    <body>
+        <nav id="navbar">
+            <ul class="menu">
+                <li><a class="navText" href="index.html">Home</a></li>
+                <li><a class="navText" href="formacao.html">Formação</a></li>
+                <li><a class="navText" href="projetos.html">Projetos</a></li>
+                <li><a class="currentNav" href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <form action="https://formsubmit.co/kaffermaryanne@gmail.com" method="POST">
+            <h2>Entre em contato</h2>
+            <label for="nome">Nome</label>
+            <input class="inputForm" type="text" id="nome" name="nome" required>
+            <label for="email">Email</label>
+            <input class="inputForm" type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem</label>
+            <textarea class="textareaForm" id="mensagem" name="mensagem" required></textarea>
+            <button class="buttonForm" type="submit">Enviar</button>
+        </form>
+    </body>
+</main>
+
+<script src="./javascript.js"></script>
+
+</html>
