@@ -1,13 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); /* Fonte do site */
 
+/* Estilização do body */
 body {
     background-color: #131313;
     padding: 6%;
     color: #fff;
 }
 
+/* Fonte padrão */
 * {
     font-family: 'DM-sans', sans-serif;
+}
+
+/* Cursor padrão em textos */
+p, h1, h2 {
+    cursor: default;
+}
+
+/* Tamanho fixo dos parágrafos */
+p {
+    font-size: 20px;
 }
 
 /* Personalização do Navbar */
@@ -32,7 +44,7 @@ body {
     padding-left: 0;
 }
 
-/* Cor do text da navbar */
+/* Estlização do texto da navbar */
 .navText {
     color: #fff;
     text-decoration: none;
@@ -43,12 +55,11 @@ body {
     padding-right: 30px;
 }
 
-/* Cor do text da navbar quando o mouse passa por cima */
 .navText:hover {
-    color: #b9add4;
+    color: #45268d;
 }
 
-/* Decoração do texto correspondente a pagina atual */
+/* Decoração na navbar correspondente a pagina atual */
 .currentNav {
     text-decoration: none;
     color: #000000;
@@ -62,9 +73,11 @@ body {
 }
 
 .currentNav:hover {
-    background-color: #b9add4;
+    background-color: #45268d;
+    color: #fff;
 }
 
+/* Estilização do formulário */
 form {
     display: flex;
     width: 30%;
@@ -74,7 +87,8 @@ form {
     justify-content: center;
 }
 
-.inputForm {
+/* Estilização dos inputs */
+input {
     color: #fff;
     font-size: 16px;
     width: 100%;
@@ -86,9 +100,20 @@ form {
     margin-bottom: 25px;
     margin-top: 4px;
     background-color: #131313;
+    transition: all 0.3s ease;
 }
 
-.textareaForm {
+input:focus {
+    outline: none;
+    border: #45268d 3px solid !important;
+}
+
+input:hover {
+    border: #646464 3px solid;
+}
+
+/* Estilização do textarea */
+textarea {
     color: #fff;
     font-size: 16px;
     width: 100%;
@@ -100,34 +125,51 @@ form {
     margin-bottom: 25px;
     margin-top: 4px;
     background-color: #131313;
+    transition: all 0.3s ease;
+    resize: none;
 }
 
+textarea:focus {
+    outline: none;
+    border: #45268d 3px solid !important;
+}
+
+textarea:hover {
+    border: #646464 3px solid;
+}
+
+/* Estilização do botão do formulário */
 .buttonForm {
     align-self: center;
-    color: #fff;
     font-size: 20px;
     width: 130px;
     padding: 10px;
-    border: 3px solid #444444;
     border-radius: 20px;
     height: 55px;
-    box-sizing: border-box;
-    margin-bottom: 25px;
     margin-top: 4px;
-    background-color: #212121;
+    background-color: #ffffff;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.buttonForm:hover {
+    background-color: #45268d;
+    color: #fff;
+    scale: 1.1;
+    border: 0;
+}
+
+/* Estilização do título */
 .title {
-    color: #b9add4;
+    background: linear-gradient(to right, #45268d, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 70px;
     margin: 0%;
 }
 
-p {
-    font-size: 20px;
-}
-
+/* Estilização do slide */
 .slide {
     display: flex;
     flex-direction: row;
@@ -139,6 +181,7 @@ p {
     gap: 10px;
 }
 
+/* Estilização dos botões de controle do slide */
 .slideButton {
     font-size: 25px;
     font: bold;
@@ -147,48 +190,57 @@ p {
     border-radius: 100px;
     height: 60px;
     background-color: #ffffff;
+    border: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     color: #000000;
 }
 
 .slideButton:hover {
-    background-color: #b9add4;
+    background-color: #45268d;
+    color: #ffffff;
+    scale: 1.1;
 }
 
 .slideButton:active {
     scale: 0.9;
 }
 
+/* Estilização do conteúdo do slide */
 .slideCard {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 89%;
+    height: 100%;
+    max-height: 630px;
     justify-content: center;
     align-items: center;
 }
 
+/* Estilização da imagem do slide */
 .slideImage {
-    height: 680px;
-    width: 59.5%;
+    max-height: 624px;
+    width: 100%;
+    max-width: 71.3rem;
     object-fit: cover;
     border-radius: 20px;
-    position: absolute;
     user-select: none;
     -webkit-user-drag: none;
+    position: absolute;
+    animation: all 0.5s ease;
 }
 
+/* Estilização do footer do slide */
 .slideFooter {
     display: flex;
     flex-direction: row;
     align-items: center;
     align-self: flex-end;
-    gap: 20px;
+    gap: 10px;
     background-color: #000000b5;
     backdrop-filter: blur(5px);
     z-index: 10;
-    width: 1100px;
+    width: 63.8rem;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 6px;
@@ -197,20 +249,36 @@ p {
     border-bottom-right-radius: 20px;
 }
 
+/* Estilização do título do projeto atual */
 .slideTitle {
     font-size: 30px;
     color: #fff;
     width: fit-content;
     width: 180px;
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
+.slideTitle:hover {
+    color: #45268d;
+    text-shadow: #4e3785 0px 0px 10px;
+}
+
+/* Estilização da descrição do projeto atual */
 .slideDesc {
     font-size: 20px;
     color: #fff;
     margin-left: auto;
     margin-right: auto;
+    cursor: default;
+    transition: all 0.3s ease;
 }
 
+.slideDesc:hover {
+    scale: 1.05;
+}
+
+/* Estilização dos botões do projeto atual */
 .slideBtn {
     color: #000000;
     background-color: #ffffff;
@@ -219,9 +287,21 @@ p {
     padding: 15px;
     font-size: larger;
     border-radius: 20px;
-    margin-left: 40px;
 }
 
 .slideBtn:hover {
-    background-color: #b9add4;
+    background-color: #45268d;
+    color: #fff;
+    scale: 1.1;
+}
+
+/* Efeito de fade-in e fade-out quando o slide é alterado */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }

@@ -1,32 +1,42 @@
 import { projetos } from "./projectsData.js"
-console.log("JS carregado")
+
 const backButton = document.getElementById('back');
 const forwardButton = document.getElementById('forward');
+const container = document.getElementById('slideContainer');
 let currentSlide = 0;
 
 function renderSlide(index) {
     const projeto = projetos[index];
-    document.getElementById('slideContainer').innerHTML = `
-        <div class="slideCard">
-            <img class="slideImage" src="${projeto.image}" alt="${projeto.name}">
-            <div class="slideFooter">
+
+    const newSlide = document.createElement('div');
+    newSlide.classList.add('slideCard', 'fade-out');
+    newSlide.innerHTML = `
+        <img class="slideImage" src="${projeto.image}" alt="${projeto.name}">
+        <div class="slideFooter">
             <h2 class="slideTitle">${projeto.name}</h2>
             <p class="slideDesc">${projeto.description}</p>
             <a class="slideBtn" href="${projeto.link}" target="_blank">Ver projeto</a>
-            </div>
+            <a class="slideBtn" href="${projeto.github}" target="_blank">Github</a>
         </div>
     `;
+
+    container.innerHTML = '';
+    container.appendChild(newSlide);
+
+    requestAnimationFrame(() => {
+        newSlide.classList.remove('fade-out');
+        newSlide.classList.add('fade-in');
+    });
 }
 
-// Inicializa com o primeiro slide
 renderSlide(currentSlide);
 
 forwardButton.addEventListener('click', () => {
-    currentSlide === projetos.length ? currentSlide = 0 : currentSlide++
+    currentSlide = (currentSlide + 1) % projetos.length;
     renderSlide(currentSlide);
-})
+});
 
 backButton.addEventListener('click', () => {
-    currentSlide === 0 ? currentSlide = 12 : currentSlide--
+    currentSlide = (currentSlide - 1 + projetos.length) % projetos.length;
     renderSlide(currentSlide);
-})
+});
