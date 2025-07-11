@@ -22,6 +22,13 @@ h2 {
     user-select: none;
 }
 
+a {
+    text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 /* Personalização do Navbar */
 #navbar {
     background-color: #00000063 !important;
@@ -47,7 +54,6 @@ h2 {
 /* Estlização do texto da navbar */
 .navText {
     color: #fff;
-    text-decoration: none;
     transition: all 0.3s ease;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -61,7 +67,6 @@ h2 {
 
 /* Decoração na navbar correspondente a pagina atual */
 .currentNav {
-    text-decoration: none;
     color: #000000;
     background-color: #fff;
     transition: all 0.3s ease;
@@ -97,10 +102,20 @@ input {
     border-radius: 20px;
     height: 50px;
     box-sizing: border-box;
-    margin-bottom: 25px;
     margin-top: 4px;
     background-color: #131313;
     transition: all 0.3s ease;
+}
+
+label {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+label:hover {
+    color: #47263e;
+    text-shadow: #572f4b 0px 0px 10px;
 }
 
 input:focus {
@@ -291,7 +306,6 @@ textarea:hover {
 .slideBtn {
     color: #000000;
     background-color: #ffffff;
-    text-decoration: none;
     transition: all 0.3s ease;
     padding: 15px;
     font-size: larger;
@@ -313,4 +327,53 @@ textarea:hover {
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
+}
+
+/* Estilização das formações */
+.formationContainer {
+    width: 30%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 100px;
+    transition: all 0.3s ease;
+}
+
+.formationContainer:hover {
+    scale: 1.05;
+}
+
+.smallTitle {
+    font-size: 30px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.smallTitle:hover {
+    color: #47263e;
+    text-shadow: #572f4b 0px 0px 10px;
+}
+
+.institution {
+    font-size: 23px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.institution:hover {
+    color: #47263e;
+    text-shadow: #572f4b 0px 0px 10px;
+}
+
+.courseDate {
+    font-size: 23px;
+    transition: all 0.3s ease;
+    margin: 0;
+    color: #646464;
+}
+
+.courseDate:hover {
+    color: #47263e;
+    text-shadow: #572f4b 0px 0px 10px;
 }
