@@ -1,7 +1,7 @@
 export const projetos = [
     {
         name: "Game Explorer",
-        description: "Consumindo API com Node.js",
+        description: "Consumindo API externa com Node.js",
         image: "./projetosImg/gameExplorer.png",
         link: "https://game-explorer-app-six.vercel.app",
         github: "https://github.com/MaryanneKaffer/game-explorer-app",
@@ -47,5 +47,12 @@ export const projetos = [
         image: "./projetosImg/todoList.png",
         link: "https://to-do-list-react-rho-dusky.vercel.app",
         github: "https://github.com/MaryanneKaffer/to-do-list-react",
+    },
+    {
+        name: "Portfolio",
+        description: "Meu portfolio com React e TailwindCSS",
+        image: "./projetosImg/portfolio.png",
+        link: "https://portfolio-delta-wheat-11.vercel.app",
+        github: "https://github.com/MaryanneKaffer/portfolio",
     }
 ];

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); /* Fonte do site */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* Fonte do site */
 
 /* Estilização do body */
 body {
@@ -13,13 +14,12 @@ body {
 }
 
 /* Cursor padrão em textos */
-p, h1, h2 {
+p,
+h1,
+h2 {
     cursor: default;
-}
-
-/* Tamanho fixo dos parágrafos */
-p {
-    font-size: 20px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Personalização do Navbar */
@@ -56,7 +56,7 @@ p {
 }
 
 .navText:hover {
-    color: #45268d;
+    color: #261421;
 }
 
 /* Decoração na navbar correspondente a pagina atual */
@@ -73,7 +73,7 @@ p {
 }
 
 .currentNav:hover {
-    background-color: #45268d;
+    background-color: #261421;
     color: #fff;
 }
 
@@ -105,7 +105,7 @@ input {
 
 input:focus {
     outline: none;
-    border: #45268d 3px solid !important;
+    border: #261421 3px solid !important;
 }
 
 input:hover {
@@ -131,7 +131,7 @@ textarea {
 
 textarea:focus {
     outline: none;
-    border: #45268d 3px solid !important;
+    border: #261421 3px solid !important;
 }
 
 textarea:hover {
@@ -153,20 +153,29 @@ textarea:hover {
 }
 
 .buttonForm:hover {
-    background-color: #45268d;
+    background-color: #261421;
     color: #fff;
     scale: 1.1;
     border: 0;
 }
 
-/* Estilização do título */
+/* Estilização dos textos da Home */
 .title {
-    background: linear-gradient(to right, #45268d, #ff0000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #79406a;
     font-size: 70px;
-    margin: 0%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    text-shadow: #4e2c44 0px 0px 10px;
+}
+
+.title:hover {
+    filter: brightness(1.5);
+}
+
+.description {
+    font-size: 25px;
+    width: 60%;
+    line-height: 1.5
 }
 
 /* Estilização do slide */
@@ -197,7 +206,7 @@ textarea:hover {
 }
 
 .slideButton:hover {
-    background-color: #45268d;
+    background-color: #261421;
     color: #ffffff;
     scale: 1.1;
 }
@@ -260,8 +269,8 @@ textarea:hover {
 }
 
 .slideTitle:hover {
-    color: #45268d;
-    text-shadow: #4e3785 0px 0px 10px;
+    color: #261421;
+    text-shadow: #261421 0px 0px 10px;
 }
 
 /* Estilização da descrição do projeto atual */
@@ -290,7 +299,7 @@ textarea:hover {
 }
 
 .slideBtn:hover {
-    background-color: #45268d;
+    background-color: #261421;
     color: #fff;
     scale: 1.1;
 }
