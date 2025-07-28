@@ -113,6 +113,7 @@ label {
     margin-top: 20px;
     transition: all 0.3s ease;
 }
+
 label:hover {
     color: #47263e;
     text-shadow: #572f4b 0px 0px 10px;
@@ -376,4 +377,21 @@ textarea:hover {
 .courseDate:hover {
     color: #47263e;
     text-shadow: #572f4b 0px 0px 10px;
+}
+
+/* Foto da pagina inical */
+.homePicture {
+    border: #fff 5px solid;
+    border-radius: 20px;
+    position: absolute;
+    width: 600px;
+    top: 0;
+    left: 45%;
+    transform: translateX(50%) translateY(50%) rotate(5deg);
+    transition: all 0.3s ease;
+}
+
+.homePicture:hover {
+    scale: 1.05;
+    transform: translateX(50%) translateY(50%) rotate(4deg);
 }
