@@ -8,7 +8,7 @@
 <main>
 
     <body>
-        <nav id="navbar">
+        <nav id="navbar"> <!-- Navbar -->
             <ul class="menu">
                 <li><a class="navText" href="./index.html">Home</a></li>
                 <li><a class="navText" href="./formacao.html">Formação</a></li>
@@ -17,13 +17,16 @@
             </ul>
         </nav>
         <form action="https://formsubmit.co/kaffermaryanne@gmail.com" method="POST">
+            <!-- Formulário mandando direto para meu e-mail -->
             <h2 class="smallTitle">Entre em contato</h2>
+
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" required></textarea>
+
             <button class="buttonForm" type="submit">Enviar</button>
         </form>
     </body>

@@ -5,14 +5,15 @@ const forwardButton = document.getElementById('forward');
 const container = document.getElementById('slideContainer');
 let currentSlide = 0;
 
+//Função do slide
 function renderSlide(index) {
     const projeto = projetos[index];
 
     const newSlide = document.createElement('div');
-    newSlide.classList.add('slideCard', 'fade-out');
+    newSlide.classList.add('slideCard', 'fade-out'); // Animações com o css
     newSlide.innerHTML = `
         <img class="slideImage" src="${projeto.image}" alt="${projeto.name}">
-        <div class="slideFooter">
+        <div class="slideFooter"> 
             <h2 class="slideTitle">${projeto.name}</h2>
             <p class="slideDesc">${projeto.description}</p>
             <a class="slideBtn" href="${projeto.link}" target="_blank">Ver projeto</a>
@@ -29,8 +30,9 @@ function renderSlide(index) {
     });
 }
 
-renderSlide(currentSlide);
+renderSlide(currentSlide); // Iniciando o slide
 
+// Funcionamento dos botôes
 forwardButton.addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % projetos.length;
     renderSlide(currentSlide);

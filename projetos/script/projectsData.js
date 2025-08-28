@@ -1,4 +1,5 @@
 export const projetos = [
+    // Todas as informações dos projetos que vão aparecer no slide
     {
         name: "Game Explorer",
         description: "Consumindo API externa com Node.js",
