@@ -4,7 +4,7 @@
 /* Estilização do body */
 body {
     background-color: #131313;
-    padding: 6%;
+    padding: 8%;
     color: #fff;
 }
 
@@ -46,7 +46,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 7rem;
-    font-size: 22px;
+    font-size: 1.5rem;
     list-style-type: none;
     padding-left: 0;
 }
@@ -394,4 +394,135 @@ textarea:hover {
 .homePicture:hover {
     scale: 1.05;
     transform: translateX(50%) translateY(50%) rotate(4deg);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    body {
+        padding: 12%;
+        height: fit-content;
+    }
+
+    #navbar {
+        height: 140px;
+    }
+
+    .menu {
+        gap: 2rem;
+        font-size: 2.4rem;
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .homePicture {
+        margin-top: 2rem;
+        border-radius: 20px;
+        position: relative;
+        width: 700px;
+        top: 0;
+        left: 0;
+        transform: translateX(0%) translateY(0%) rotate(5deg);
+        transition: all 0.3s ease;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    form {
+        width: 100%;
+        padding: 10%;
+    }
+
+    input {
+        font-size: 30px;
+        height: 70px;
+    }
+
+    label {
+        font-size: 35px;
+    }
+
+    textarea {
+        font-size: 30px;
+    }
+
+    textarea:focus {
+        outline: none;
+        border: #261421 3px solid !important;
+    }
+
+    .buttonForm {
+        font-size: 30px;
+        width: 160px;
+        height: 85px;
+    }
+
+    .title {
+        font-size: 90px;
+    }
+
+    .description {
+        font-size: 35px;
+        width: 100%;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        gap: 23rem;
+    }
+
+    #slideContainer {
+        width: 0%;
+    }
+
+    .slideButton {
+        font-size: 55px;
+        width: 100px;
+        padding: 10px;
+        height: 100px;
+    }
+
+    .slideButton:active {
+        scale: 0.9;
+    }
+
+    .slideImage {
+        width: 70%;
+    }
+
+    .slideFooter {
+        gap: 5px;
+        min-width: 80dvw;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .formationContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .smallTitle {
+        font-size: 50px;
+    }
+
+    .institution {
+        font-size: 40px;
+        transition: all 0.3s ease;
+        margin: 0;
+    }
+
+    .courseDate {
+        font-size: 30px;
+        transition: all 0.3s ease;
+        margin: 0;
+        color: #646464;
+    }
 }
