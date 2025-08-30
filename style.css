@@ -6,6 +6,8 @@ body {
     background-color: #131313;
     padding: 8%;
     color: #fff;
+    max-width: screen;
+    overflow: hidden;
 }
 
 /* Fonte padrão */
@@ -401,6 +403,8 @@ textarea:hover {
     body {
         padding: 12%;
         height: fit-content;
+        overflow: visible;
+        overflow-x: hidden;
     }
 
     #navbar {
@@ -421,8 +425,13 @@ textarea:hover {
         width: 700px;
         top: 0;
         left: 0;
-        transform: translateX(0%) translateY(0%) rotate(5deg);
+        transform: translateX(0%) translateY(0%) rotate(0deg);
         transition: all 0.3s ease;
+    }
+
+    .homePicture:hover {
+        scale: 1.05;
+        transform: translateX(0%) translateY(0%) rotate(4deg);
     }
 
     .container {
