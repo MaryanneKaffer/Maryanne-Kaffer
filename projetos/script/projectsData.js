@@ -8,13 +8,6 @@ export const projetos = [
         github: "https://github.com/MaryanneKaffer/game-explorer-app",
     },
     {
-        name: "Cinthia Correia",
-        description: "Site pessoal de uma psicóloga - React - TailwindCSS",
-        image: "./projetos/projetosImg/cinthiacorreia.png",
-        link: "https://site-psicologa-cinthia.vercel.app",
-        github: "https://github.com/MaryanneKaffer/site-psicologa-cinthia",
-    },
-    {
         name: "API Test",
         description: "API de teste para estudos - Node.js",
         image: "./projetos/projetosImg/apiTest.png",
